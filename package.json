@@ -49,6 +49,7 @@
     "lodash.omit": "^4.4.1",
     "lodash.tonumber": "^4.0.3",
     "prop-types": "^15.6.2",
+    "react-transition-group": "^1.2.1",
     "tether": "^1.3.4"
   },
   "peerDependencies": {
