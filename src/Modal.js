@@ -154,12 +154,6 @@ class Modal extends React.Component {
       this.renderChildren(),
       this._element
     );
-
-    // check if modal should receive focus
-    if (this._focus) {
-      this._dialog.parentNode.focus();
-      this._focus = false;
-    }
   }
 
   renderChildren() {

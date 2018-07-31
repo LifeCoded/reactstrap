@@ -6013,12 +6013,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    key: 'renderIntoSubtree',
 	    value: function renderIntoSubtree() {
 	      _reactDom2.default.unstable_renderSubtreeIntoContainer(this, this.renderChildren(), this._element);
-	
-	      // check if modal should receive focus
-	      if (this._focus) {
-	        this._dialog.parentNode.focus();
-	        this._focus = false;
-	      }
 	    }
 	  }, {
 	    key: 'renderChildren',
