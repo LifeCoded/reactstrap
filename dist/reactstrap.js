@@ -5966,7 +5966,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    key: 'togglePortal',
 	    value: function togglePortal() {
 	      if (this.props.isOpen) {
-	        this._focus = true;
+	        this._focus = false;
 	        this.show();
 	      } else {
 	        this.hide();
