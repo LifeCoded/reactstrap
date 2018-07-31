@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import classNames from 'classnames';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { mapToCssModules } from './utils';
