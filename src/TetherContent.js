@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import isFunction from 'lodash.isfunction';
-import Tether from 'tether';
+import PropTypes from "prop-types";
+import React from "react";
+import ReactDOM from "react-dom";
+import isFunction from "lodash.isfunction";
+import Tether from "tether";
 
 const propTypes = {
   children: PropTypes.node.isRequired,
@@ -14,12 +14,12 @@ const propTypes = {
   tether: PropTypes.object.isRequired,
   tetherRef: PropTypes.func,
   style: PropTypes.node,
-  cssModule: PropTypes.object,
+  cssModule: PropTypes.object
 };
 
 const defaultProps = {
   isOpen: false,
-  tetherRef: function () {}
+  tetherRef: function() {}
 };
 
 class TetherContent extends React.Component {
@@ -83,7 +83,7 @@ class TetherContent extends React.Component {
   }
 
   hide() {
-    document.removeEventListener('click', this.handleDocumentClick, true);
+    document.removeEventListener("click", this.handleDocumentClick, true);
 
     if (this._element) {
       document.body.removeChild(this._element);
@@ -99,16 +99,16 @@ class TetherContent extends React.Component {
   }
 
   show() {
-    document.addEventListener('click', this.handleDocumentClick, true);
+    document.addEventListener("click", this.handleDocumentClick, true);
 
-    this._element = document.createElement('div');
+    this._element = document.createElement("div");
     this._element.className = this.props.className;
     document.body.appendChild(this._element);
     this.renderIntoSubtree();
     this._tether = new Tether(this.getTetherConfig());
     this.props.tetherRef(this._tether);
     this._tether.position();
-    this._element.childNodes[0].focus();
+    // this._element.childNodes[0].focus();
   }
 
   toggle(e) {
@@ -129,10 +129,7 @@ class TetherContent extends React.Component {
 
   renderChildren() {
     const { children, style } = this.props;
-    return React.cloneElement(
-      children,
-      { style }
-    );
+    return React.cloneElement(children, { style });
   }
 
   render() {
