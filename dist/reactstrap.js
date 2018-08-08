@@ -1806,7 +1806,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -1876,12 +1876,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	
 	  _createClass(TetherContent, [{
-	    key: 'componentDidMount',
+	    key: "componentDidMount",
 	    value: function componentDidMount() {
 	      this.handleProps();
 	    }
 	  }, {
-	    key: 'componentDidUpdate',
+	    key: "componentDidUpdate",
 	    value: function componentDidUpdate(prevProps) {
 	      if (this.props.isOpen !== prevProps.isOpen) {
 	        this.handleProps();
@@ -1891,12 +1891,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    }
 	  }, {
-	    key: 'componentWillUnmount',
+	    key: "componentWillUnmount",
 	    value: function componentWillUnmount() {
 	      this.hide();
 	    }
 	  }, {
-	    key: 'getTarget',
+	    key: "getTarget",
 	    value: function getTarget() {
 	      var target = this.props.tether.target;
 	
@@ -1907,7 +1907,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return target;
 	    }
 	  }, {
-	    key: 'getTetherConfig',
+	    key: "getTetherConfig",
 	    value: function getTetherConfig() {
 	      var config = _extends({}, this.props.tether);
 	
@@ -1916,7 +1916,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return config;
 	    }
 	  }, {
-	    key: 'handleDocumentClick',
+	    key: "handleDocumentClick",
 	    value: function handleDocumentClick(e) {
 	      var container = this._element;
 	      if (e.target === container || !container.contains(e.target)) {
@@ -1924,7 +1924,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    }
 	  }, {
-	    key: 'handleProps',
+	    key: "handleProps",
 	    value: function handleProps() {
 	      if (this.props.isOpen) {
 	        this.show();
@@ -1933,9 +1933,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    }
 	  }, {
-	    key: 'hide',
+	    key: "hide",
 	    value: function hide() {
-	      document.removeEventListener('click', this.handleDocumentClick, true);
+	      document.removeEventListener("click", this.handleDocumentClick, true);
 	
 	      if (this._element) {
 	        document.body.removeChild(this._element);
@@ -1950,21 +1950,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    }
 	  }, {
-	    key: 'show',
+	    key: "show",
 	    value: function show() {
-	      document.addEventListener('click', this.handleDocumentClick, true);
+	      document.addEventListener("click", this.handleDocumentClick, true);
 	
-	      this._element = document.createElement('div');
+	      this._element = document.createElement("div");
 	      this._element.className = this.props.className;
 	      document.body.appendChild(this._element);
 	      this.renderIntoSubtree();
 	      this._tether = new _tether2.default(this.getTetherConfig());
 	      this.props.tetherRef(this._tether);
 	      this._tether.position();
-	      this._element.childNodes[0].focus();
+	      // this._element.childNodes[0].focus();
 	    }
 	  }, {
-	    key: 'toggle',
+	    key: "toggle",
 	    value: function toggle(e) {
 	      if (this.props.disabled) {
 	        return e && e.preventDefault();
@@ -1973,12 +1973,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return this.props.toggle();
 	    }
 	  }, {
-	    key: 'renderIntoSubtree',
+	    key: "renderIntoSubtree",
 	    value: function renderIntoSubtree() {
 	      _reactDom2.default.unstable_renderSubtreeIntoContainer(this, this.renderChildren(), this._element);
 	    }
 	  }, {
-	    key: 'renderChildren',
+	    key: "renderChildren",
 	    value: function renderChildren() {
 	      var _props = this.props,
 	          children = _props.children,
@@ -1987,7 +1987,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return _react2.default.cloneElement(children, { style: style });
 	    }
 	  }, {
-	    key: 'render',
+	    key: "render",
 	    value: function render() {
 	      return null;
 	    }
